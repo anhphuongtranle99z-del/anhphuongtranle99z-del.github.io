@@ -5,52 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AkzAgency Privacy Policy</title>
 <style>
-  body { font: 16px/1.6 system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; background: #fff; }
-  h2 { margin-top: 28px; }
+  body { font: 16px/1.6 system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; background: #fff; }
+  h2 { margin-top: 30px; }
   .sub { color: #666; margin-top: 0; }
   a { color: #c2185b; }
+  table { border-collapse: collapse; width: 100%; }
+  td, th { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
 </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
-<p class="sub">AkzAgency · Last updated: 20 November 2026</p>
+<h1>AkzAgency Privacy Policy</h1>
+<p class="sub">Last updated: 24 November 2026</p>
 
-<p>AkzAgency is an internal tool that uploads videos to YouTube channels owned or managed by our team.
-This policy explains what Google user data the tool accesses and how it is used.</p>
+<p>This Privacy Policy explains what information <b>AkzAgency</b> ("we", "us") collects when a YouTube channel owner connects
+their channel to AkzAgency, how we use and protect that information, who we share it with, how long we keep it,
+and how you can have it deleted. AkzAgency is a tool that uploads videos, writes titles and descriptions, and sets thumbnails
+on YouTube channels whose owners authorize it. See our <a href="index.html">home page</a> for a description of the app.</p>
 
-<h2>Data we access</h2>
+<h2>1. Information we collect</h2>
+<h3>a. Information from your Google account</h3>
+<p>When you connect a YouTube channel, you sign in with Google and approve the following permissions. We receive only the data listed here.</p>
+<table>
+  <tr><th>Google permission</th><th>Data we receive</th></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube.readonly</code></td><td>Your channel's ID, name and subscriber count.</td></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube.upload</code></td><td>Permission to upload videos and set thumbnails on your channel. We do not read your existing videos, comments, analytics or revenue.</td></tr>
+  <tr><td>OAuth tokens</td><td>An access token and refresh token issued by Google, which let AkzAgency act on your channel within the permissions above.</td></tr>
+</table>
+<p>We do <b>not</b> receive your Google password, email address, contacts, Gmail, Google Drive files, payment details or location.</p>
+
+<h3>b. Information created while using AkzAgency</h3>
+<p>For each upload we keep a record of the video file name, the title and description written for it, the YouTube video ID, the scheduled publish time and the upload status, so our team can see what has been published.</p>
+
+<h3>c. Team member accounts</h3>
+<p>Our own team members sign in to AkzAgency with a username and password created by our administrator. Passwords are stored only as Argon2 hashes.</p>
+
+<h2>2. How we use the information</h2>
 <ul>
-  <li><b>YouTube upload permission</b> (<code>youtube.upload</code>): to upload videos and set thumbnails on the channel you authorize.</li>
-  <li><b>YouTube read-only permission</b> (<code>youtube.readonly</code>): to read the name, ID and subscriber count of the channel you authorize, so our staff can confirm it is the correct channel.</li>
-  <li>An OAuth refresh token issued by Google for the authorized channel.</li>
+  <li><b>Channel ID, name and subscriber count:</b> shown inside AkzAgency so our team can confirm the correct channel was connected and choose it when uploading.</li>
+  <li><b>Upload permission and OAuth tokens:</b> used only to upload the videos our team selects to your channel, set their titles, descriptions, tags and privacy status, and set their thumbnails.</li>
+  <li><b>Upload records:</b> used to show upload history and avoid uploading the same video twice.</li>
 </ul>
-<p>We do not request access to Gmail, Google Drive, contacts or any other Google service.</p>
+<p>We do not use Google user data for advertising, we do not sell it, we do not use it to build user profiles, and we do not use it to develop, improve or train AI or machine learning models.</p>
 
-<h2>How we use the data</h2>
-<p>The data is used only to upload our team's videos to the channel you authorized and to show that channel's name inside the tool.
-We do not use it for advertising, we do not sell it, and we do not use it to train AI models.</p>
+<h2>3. AI processing</h2>
+<p>AkzAgency uses Google Gemini to draft video titles, descriptions and tags. The only data sent to Gemini is the subtitle text of our own videos
+and the public title, description and tags of a public YouTube video we choose as a reference. <b>No Google user data obtained through your
+sign-in (channel information or tokens) is ever sent to Gemini or any other AI model.</b> AkzAgency does not generate or edit images or video with AI.</p>
 
-<h2>Storage and security</h2>
-<p>Refresh tokens are encrypted (AES-256-GCM) and stored on our own server, which is not publicly accessible.
-Only our administrator and the staff member assigned to the channel can use it within the tool.</p>
+<h2>4. How we store and protect the information</h2>
+<ul>
+  <li>OAuth tokens are encrypted with AES-256-GCM before being stored in our database. The encryption key is kept separately from the database.</li>
+  <li>The database is stored on a server we control. It is not publicly accessible.</li>
+  <li>Only our administrator and the team member assigned to a channel can use that channel inside AkzAgency, and every access requires signing in.</li>
+  <li>Data is sent only to Google services (YouTube Data API, Google OAuth and Google Gemini) over encrypted HTTPS connections.</li>
+</ul>
 
-<h2>Sharing</h2>
-<p>We do not share Google user data with third parties. Video files and their text are sent to Google (YouTube, and Google Gemini to draft titles and descriptions) only as needed to perform the upload.</p>
+<h2>5. Sharing</h2>
+<p>We do not share, sell, rent or transfer Google user data to any third party. Data is sent to Google only as needed to perform the actions described above.
+We may disclose information only if required by law.</p>
 
-<h2>Retention and deletion</h2>
-<p>A channel's token is kept until the channel is removed from the tool or you revoke access.
-You can revoke access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; the token then stops working immediately.
-To ask us to delete stored data, contact us at the address below.</p>
+<h2>6. Retention and deletion</h2>
+<ul>
+  <li>Your channel information and OAuth tokens are kept only while your channel is connected to AkzAgency.</li>
+  <li>If you revoke access, the stored token stops working immediately and can no longer be used on your channel.</li>
+  <li>When you ask us to disconnect your channel, we delete the stored token and channel information from our database.</li>
+  <li>Daily database backups are kept for 7 days and then deleted automatically, so deleted data disappears from backups within 7 days.</li>
+  <li>Upload records for videos that remain published on your channel are kept for our team's publishing history unless you ask us to delete them.</li>
+</ul>
+<p><b>How to revoke access:</b> go to <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, select AkzAgency and choose "Remove access". AkzAgency then immediately loses access to your channel.</p>
+<p><b>How to request deletion:</b> contact us using the details below. We will delete your data within 30 days of the request and confirm when it is done.</p>
 
-<h2>Limited Use</h2>
-<p>AkzAgency's use and transfer of information received from Google APIs adheres to the
-<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+<h2>7. Google API Services User Data Policy</h2>
+<p>AkzAgency's use and transfer to any other app of information received from Google APIs will adhere to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.
+AkzAgency also uses YouTube API Services; by connecting a channel you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>,
+and Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-<h2>Contact</h2>
-<p>Open an issue at <a href="https://github.com/anhphuongtranle99z-del/anhphuongtranle99z-del.github.io/issues">github.com/anhphuongtranle99z-del/anhphuongtranle99z-del.github.io/issues</a>.</p>
+<h2>8. Children</h2>
+<p>AkzAgency is not directed to children under 13 and we do not knowingly collect information from them.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If we change this policy, we will update it on this page and change the "Last updated" date above.</p>
+
+<h2>10. Contact</h2>
+<p>For questions or deletion requests, open an issue at
+<a href="https://github.com/anhphuongtranle99z-del/anhphuongtranle99z-del.github.io/issues">github.com/anhphuongtranle99z-del/anhphuongtranle99z-del.github.io/issues</a>.</p>
 
 <hr>
-<p lang="vi"><b>Tóm tắt:</b> AkzAgency chỉ dùng quyền YouTube để upload video của team lên kênh bạn cho phép và đọc tên kênh để xác nhận đúng kênh.
-Token được mã hoá, lưu trên server riêng, không chia sẻ cho bên thứ ba. Bạn có thể thu hồi quyền bất cứ lúc nào ở myaccount.google.com/permissions.</p>
+<p lang="vi"><b>Tóm tắt:</b> AkzAgency chỉ dùng quyền YouTube để upload video lên kênh bạn cho phép và đọc tên, ID, số người đăng ký của kênh để xác nhận đúng kênh.
+Token được mã hoá AES-256-GCM, lưu trên server riêng, không chia sẻ hay bán cho bên thứ ba, không gửi cho AI. Bạn có thể thu hồi quyền bất cứ lúc nào ở myaccount.google.com/permissions
+hoặc yêu cầu xoá dữ liệu qua mục liên hệ ở trên.</p>
 </body>
 </html>
