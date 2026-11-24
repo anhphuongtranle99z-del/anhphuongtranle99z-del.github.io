@@ -4,23 +4,64 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="2JKilCBsW7sEng4ab-X80TxGaNz-TTzKZ76zYrKZXRI" />
-<title>AkzAgency</title>
+<meta name="description" content="AkzAgency is a YouTube publishing tool that uploads videos, writes titles and descriptions, and sets thumbnails on YouTube channels whose owners authorize it.">
+<title>AkzAgency – YouTube video publishing tool</title>
 <style>
-  body { font: 16px/1.6 system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; background: #fff; }
-  h1 { margin-bottom: 4px; }
-  .sub { color: #666; margin-top: 0; }
+  body { font: 16px/1.6 system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; background: #fff; }
+  h1 { margin-bottom: 4px; font-size: 2.2em; }
+  h2 { margin-top: 32px; }
+  .sub { color: #555; margin-top: 0; font-size: 1.15em; }
   a { color: #c2185b; }
+  table { border-collapse: collapse; width: 100%; }
+  td, th { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+  footer { margin-top: 40px; color: #666; font-size: 0.9em; }
 </style>
 </head>
 <body>
-<h1>AkzAgency</h1>
-<p class="sub">Internal YouTube upload tool</p>
-<p>AkzAgency is an internal tool used by our team to upload videos to YouTube channels that the team owns or manages.
-A channel owner signs in with Google and grants permission; the tool then uploads videos, writes titles and descriptions,
-and sets thumbnails on that channel only.</p>
-<p>The tool is not offered to the public. Access is limited to accounts created by our administrator.</p>
-<p><a href="privacy.html">Privacy Policy</a></p>
-<hr>
-<p lang="vi">AkzAgency là công cụ nội bộ để team upload video lên các kênh YouTube do team sở hữu hoặc quản lý. Không cung cấp cho người ngoài.</p>
+<header>
+  <h1>AkzAgency</h1>
+  <p class="sub">A publishing tool for uploading videos to YouTube channels</p>
+</header>
+
+<main>
+<h2>What AkzAgency does</h2>
+<p><b>AkzAgency</b> helps the AkzAgency content team publish videos to the YouTube channels it owns or manages.
+Instead of uploading each video by hand in YouTube Studio, a team member picks a folder of finished videos,
+and AkzAgency uploads them to the chosen channel on a schedule.</p>
+<p>For each video, AkzAgency:</p>
+<ol>
+  <li>Uploads the video file to the channel (as private, unlisted, public or scheduled, as chosen by the team member).</li>
+  <li>Writes a title, description and tags in the channel's language, drafted from the video's own subtitle text.</li>
+  <li>Sets the custom thumbnail image that our team designed for that video.</li>
+</ol>
+
+<h2>How a channel is connected</h2>
+<p>A channel is connected only when its owner signs in with their Google account and approves access on Google's consent screen.
+The owner can disconnect at any time from <a href="https://myaccount.google.com/permissions">Google Account → Third-party connections</a>.</p>
+
+<h2>Google data AkzAgency uses</h2>
+<table>
+  <tr><th>Permission</th><th>Why AkzAgency needs it</th></tr>
+  <tr><td><code>youtube.upload</code><br>Manage your YouTube videos</td><td>Upload videos and set their thumbnails on the authorized channel.</td></tr>
+  <tr><td><code>youtube.readonly</code><br>View your YouTube account</td><td>Read the channel's name, ID and subscriber count, so the team can confirm the right channel was connected.</td></tr>
+</table>
+<p>AkzAgency does not ask for access to Gmail, Google Drive, contacts or any other Google service, and does not read your email address.
+Full details are in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+<h2>Responsible use of AI</h2>
+<p>AkzAgency uses an AI model (Google Gemini) only to draft <b>text</b>: titles, descriptions and tags, based on the subtitle text of our own videos.
+AkzAgency does not generate, edit or alter images or video with AI, and it is never used to create sexual, intimate or non-consensual imagery of any person.
+No Google user data obtained through YouTube sign-in is sent to the AI model.</p>
+
+<h2>Who uses AkzAgency</h2>
+<p>AkzAgency is operated by the AkzAgency team for the channels it owns or manages, together with the owners of those channels.
+This page and the <a href="privacy.html">Privacy Policy</a> are public and can be read without signing in.</p>
+</main>
+
+<footer>
+  <p><a href="privacy.html">Privacy Policy</a> · Contact: <a href="https://github.com/anhphuongtranle99z-del/anhphuongtranle99z-del.github.io/issues">GitHub issues</a></p>
+  <p lang="vi">AkzAgency là công cụ đăng video lên các kênh YouTube do team AkzAgency sở hữu hoặc quản lý: upload video, viết tiêu đề và mô tả, đặt thumbnail. Kênh chỉ được kết nối khi chủ kênh đăng nhập Google và đồng ý cấp quyền.</p>
+</footer>
 </body>
 </html>
